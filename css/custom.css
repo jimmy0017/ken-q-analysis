@@ -509,7 +509,7 @@ td.highlight {
     border-radius: 5px;
     border: #ebebeb solid 1px;
     width: 200px;
-    height: 28px;
+    min-height: 28px;
     padding: 6px 6px 2px 8px;
     color: black;
     background: #eeeeee;
@@ -1182,7 +1182,7 @@ div.d3Tooltip {
 }
 
 .linkUnderline:link {
-    border-bottom: 3px solid #38acec;
+    border-bottom: 2px solid #38acec;
     opacity: 0.6;
     box-shadow: 0px -4px 0px #38acec inset;
     color: black !important;
@@ -1193,6 +1193,15 @@ div.d3Tooltip {
     background-color: #38acec;
     opacity: 0.6;
 }
+
+.linkUnderline:visited {
+    border-bottom: 2px solid #38acec;
+    opacity: 0.6;
+    box-shadow: 0px -4px 0px #38acec inset;
+    color: black !important;
+    text-decoration: none !important;
+}
+
 
 #section4 path {
     stroke: black;
@@ -1294,13 +1303,18 @@ div.d3Tooltip {
 
 
 .factorVizOptionsHeaderDivText {
-    margin-bottom: 25px;
+    margin-top: 3px !important;
+    margin-left: 10px !important;
     font-size: 25px;
     margin-left: 10px;
 }
 
 .vizInput3 {
     width:416px !important;
+}
+
+.vizInput4 {
+  width:80px !important;
 }
 
 .displayPanelIntroText {
@@ -1333,4 +1347,95 @@ text-align:left !important;
 
 .panelIntroTextSpanDiv span {
     font-size: 18px;
+}
+
+.vizButtonYes.active {
+  background-color: #38acec !important;
+  color: white !important;
+}
+
+.vizButtonNo.active {
+  background-color: transparent; !important;
+}
+
+.updateVizButton {
+    margin-left: 10px;
+}
+
+#section2 label {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    font-size: 18px;
+    font-weight: 800;
+    color: #555;
+    height: 38px;
+    line-height: 38px;
+    padding: 5px 15px 5px 15px;
+    /*letter-spacing: .1rem;*/
+    /*float: left;*/
+    background-color: #eeeeee;
+    border: 1px solid #bbb;
+}
+
+#section2 label:first-child {
+    border-left-width: 1px;
+    border-top-left-radius: .2em;
+    border-bottom-left-radius: .2em;
+}
+
+#section2 label:last-child {
+    border-top-right-radius: .2em;
+    border-bottom-right-radius: .2em;
+}
+
+#section2 label:hover {
+    background-color: #38acec;
+    color: white;
+    border: 1px solid #38acec;
+    /*    box-shadow: 1px 1px 1px rgba(0, 0, 0, .2) inset;*/
+}
+
+
+#section2 label.selected {
+    background-color: #38acec;
+    color: white;
+    border: 1px solid #38acec;
+    /*    box-shadow: 1px 1px 1px rgba(0, 0, 0, .2) inset;*/
+}
+
+#section2 label.warning.selected {
+    background-color: red;
+    border-color: darkred;
+}
+
+#section2 input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.dataSelectionLabelDiv {
+    display: inline-block !important;
+    width: auto;
+    margin-right: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.selectBox {
+    margin-left: 10px;
+}
+
+.jsonFileName {
+    margin-right: 10px;
+}
+
+.jsonDownloadPQ {
+  margin-top: 3px;
+  margin-right: 5px;
+}
+
+.u-right-margin {
+  margin-right: 20px;
 }
